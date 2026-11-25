@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="760" fill="#f3f1ec"/>
+  <text x="40" y="52" font-size="26" font-weight="600" fill="#1c1a17">Moniscalling — anatomia (medida na referência 05)</text>
+  <text x="40" y="82" font-size="15" fill="#575552">Moldura fina constante (t) · um lado engrossa em trilho · o poço usa r = R − t em TODOS os cantos, inclusive do lado do trilho</text>
+
+  <!-- shell -->
+  <rect x="60" y="120" width="700" height="500" rx="56" fill="#000"/>
+  <!-- well: rail 120, t 12, R 56 -> r 44 -->
+  <rect x="180" y="132" width="568" height="476" rx="44" fill="#96aaab"/>
+  <!-- clouds hint -->
+  <g fill="#e9dbb5" opacity=".9">
+    <rect x="200" y="470" width="24" height="24"/><rect x="224" y="446" width="24" height="24"/><rect x="248" y="446" width="24" height="24"/><rect x="224" y="470" width="96" height="24"/><rect x="200" y="494" width="168" height="24"/><rect x="190" y="518" width="240" height="24"/><rect x="190" y="542" width="330" height="40"/>
+    <rect x="296" y="422" width="24" height="24"/><rect x="320" y="470" width="24" height="24"/><rect x="420" y="494" width="48" height="24"/><rect x="444" y="470" width="24" height="24"/>
+  </g>
+  <rect x="180" y="132" width="568" height="476" rx="44" fill="none" stroke="#fff" stroke-opacity=".10"/>
+  <!-- rail icons -->
+  <g fill="#fff"><circle cx="120" cy="178" r="13"/><rect x="104" y="232" width="32" height="24" rx="8" opacity=".85"/><rect x="108" y="292" width="24" height="24" rx="6" opacity=".6"/><rect x="108" y="346" width="24" height="24" rx="6" opacity=".6"/><circle cx="120" cy="566" r="14" fill="#f61670"/></g>
+
+  <!-- annotations -->
+  <g stroke="#e0482a" stroke-width="2" fill="none">
+    <!-- t top -->
+    <line x1="560" y1="100" x2="560" y2="120"/><line x1="560" y1="132" x2="560" y2="150"/>
+    <path d="M552 120h16M552 132h16"/>
+    <!-- rail width -->
+    <path d="M60 650h120M60 642v16M180 642v16"/>
+    <!-- R outer -->
+    <circle cx="704" cy="176" r="56" stroke-dasharray="4 5" opacity=".9"/>
+    <!-- r inner, concentric -->
+    <circle cx="704" cy="176" r="44" stroke="#2952d5" stroke-dasharray="4 5"/>
+    <!-- rail-side inner corner circle -->
+    <circle cx="224" cy="176" r="44" stroke="#2952d5" stroke-dasharray="4 5"/>
+  </g>
+  <circle cx="704" cy="176" r="4" fill="#e0482a"/>
+  <circle cx="224" cy="176" r="4" fill="#2952d5"/>
+  <g font-size="15" fill="#1c1a17">
+    <text x="576" y="112">t = bezel fino (6 px na ref.)</text>
+    <text x="66" y="680">trilho = 93 px ≈ 15·t</text>
+    <text x="772" y="150" fill="#e0482a">R = raio externo ≈ 48 px ≈ 8·t</text>
+    <text x="772" y="174" fill="#2952d5">r = R − t ≈ 42 px (medido)</text>
+    <text x="772" y="198" fill="#575552">mesmo centro → concêntrico</text>
+    <text x="236" y="246" fill="#2952d5">canto do lado do trilho:</text>
+    <text x="236" y="266" fill="#2952d5">mesmo r, não “R − trilho”</text>
+  </g>
+
+  <!-- wrong examples -->
+  <text x="800" y="300" font-size="18" font-weight="600" fill="#1c1a17">Erros comuns</text>
+  <g>
+    <rect x="800" y="320" width="170" height="130" rx="30" fill="#000"/>
+    <rect x="840" y="328" width="122" height="114" rx="30" fill="#96aaab"/>
+    <text x="800" y="474" font-size="14" fill="#1c1a17">r = R → folga engorda</text>
+    <text x="800" y="492" font-size="14" fill="#575552">nos cantos (Cloud Four)</text>
+  </g>
+  <g>
+    <rect x="1000" y="320" width="170" height="130" rx="30" fill="#000"/>
+    <rect x="1040" y="328" width="122" height="114" rx="0" fill="#96aaab"/>
+    <text x="1000" y="474" font-size="14" fill="#1c1a17">r = R − trilho → quadrado</text>
+    <text x="1000" y="492" font-size="14" fill="#575552">(raio negativo, zera)</text>
+  </g>
+  <g>
+    <rect x="800" y="520" width="170" height="130" rx="30" fill="#000"/>
+    <rect x="808" y="528" width="154" height="114" rx="22" fill="#96aaab"/>
+    <text x="800" y="674" font-size="14" fill="#1c1a17">sem trilho: r = R − t</text>
+    <text x="800" y="692" font-size="14" fill="#575552">(moldura de aparelho)</text>
+  </g>
+  <g>
+    <rect x="1000" y="520" width="170" height="130" rx="30" fill="#000"/>
+    <rect x="1040" y="528" width="122" height="114" rx="22" fill="#96aaab"/>
+    <text x="1000" y="674" font-size="14" fill="#1c1a17">certo: trilho + r = R − t</text>
+    <text x="1000" y="692" font-size="14" fill="#575552">a curva “escorre” do bezel</text>
+  </g>
+  <text x="40" y="738" font-size="13" fill="#767471">Fórmula: innerRadius = outerRadius − gap (gap = borda + padding) · Apple: concentricidade no Liquid Glass (WWDC25) · CSS: corner-shape: squircle (Chrome 139+)</text>
+</svg>
